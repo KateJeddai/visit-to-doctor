@@ -1,0 +1,35 @@
+.visits-wrapper{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.actual-visits{
+    flex-basis: 48%;
+}
+.previous-visits{
+    flex-basis: 48%;
+}
+.visits{
+    margin: 0.5rem 2rem;
+}
+h3{
+    width: 100%;
+    background-color: #dcebf4;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.visit-item{
+    display: flex;
+    justify-content: space-between;
+}
+.visit-item div{
+    align-self: center;
+}
+.btn-cancel{
+    background-color: transparent;
+    border: 1px solid #628599;
+    color: #628599;
+    font-size: 0.9rem;
+}

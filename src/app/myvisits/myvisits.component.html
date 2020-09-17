@@ -1,0 +1,27 @@
+<div class="visits-wrapper">
+  <div class="actual-visits">
+    <h3>Your Appointments:</h3>
+    <div *ngIf="visits;  else novisits">
+      <div *ngFor="let visit of visits"  class="visits" [@visitCancelled]>
+       <div *ngIf="checkActuality(visit.visitDate, visit.visitTime);" class="visit-item">       
+         <div >{{ visit.visitDate }} - {{ visit.visitTime }}</div>
+         <button class="btn btn-cancel" (click)="onCancelVisit(visit)">Cancel</button>
+       </div>
+      </div>
+    </div> 
+    <ng-template #novisits>
+        No visits arranged
+    </ng-template>
+  </div> 
+  <div class="previous-visits">
+    <h3>Previous visits:</h3>
+      <div *ngFor="let visit of visits"  class="visits">
+        <div *ngIf="!checkActuality(visit.visitDate, visit.visitTime)">       
+          <div>{{ visit.visitDate }} - {{ visit.visitTime }}</div>
+        </div>      
+      </div>
+      <div *ngIf="previousVisits.length === 0">
+        <p>No previous visits</p>
+     </div>
+  </div>   
+</div>

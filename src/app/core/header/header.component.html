@@ -1,0 +1,20 @@
+<header>
+    <div class="header-wrapper">
+        <div class="brand-wrapper">
+          <a class="brand-name" routerLink=""><fa-icon [icon]="faMedkit"></fa-icon>Dr Sai Sudarsan</a>
+          <p>Neurosurgeon and Spine Surgeon</p>
+        </div>
+        <nav>
+            <ul *ngIf="!authService.isAuth(); else logout">
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/registration">Register</a></li>
+            </ul>
+            
+            <ng-template #logout>
+                <ul>
+                    <li><a (click)="onLogout()">Logout</a></li>
+                </ul>
+            </ng-template>
+        </nav>
+    </div>
+</header>

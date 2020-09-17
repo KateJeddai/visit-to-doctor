@@ -1,0 +1,83 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.visit-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.visit-forms{
+    flex-basis: 35%;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+mat-form-field{
+    width: 100%;
+}
+.time-div{
+    margin-top: 2rem;
+    flex-basis: 55%;
+}
+.day-time-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.day-time-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.today-date{
+    flex-basis: 100%;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.time-item{
+    flex-basis: 20%;
+    padding: 0.5rem 0 0.5rem 0;
+    height: auto;
+    text-align: center;
+    margin: 0 0.5rem 0.5rem 0;
+    border: none;
+    box-sizing: border-box;
+    background-color: #d1e5f0;
+    cursor: pointer;
+    outline-style: none;
+}
+.time-item:hover{
+    background-color: #df5656 !important; 
+    color: #fff !important; 
+}
+
+.modal{
+    position: fixed;
+    min-width: 250px;
+    max-width: 350px;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border: gray 1px solid;
+    text-align: center;
+}
+.btns{
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+}
+.btn-cancel-create{
+    background-color: #ffac04;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+.btn-submit{
+    background-color: #2e93d2;
+    color: #fff;
+}

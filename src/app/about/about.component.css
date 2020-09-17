@@ -1,0 +1,48 @@
+.bio-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;    
+    
+}
+.bio-image{
+    flex-basis: 30%;
+}
+.visit-btns{
+    flex-basis: 10%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;   
+}
+.bio-text{
+    flex-basis: 55%;
+}
+h4{
+  margin: 0;
+  color: #628599;
+}
+.btn-create{
+    background-color: #ff6b68;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+.btn-create:hover{
+    background-color: transparent;
+    border: 1px solid #ff6b68;
+    color: #ff6b68;
+}
+.btn-visits{
+    background-color: #41c7a2;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    outline-style: none;
+}
+.btn-visits:hover{
+    background-color: transparent;
+    border: 1px solid #41c7a2;
+    color: #41c7a2;    
+    outline-style: none;
+}

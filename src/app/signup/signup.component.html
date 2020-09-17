@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-content">
+      <div class="card-title">Register</div>
+      <form (ngSubmit)="onSignUp(f);" #f="ngForm">
+        <div class="input-field">
+              <label for="firstName">First Name</label>
+              <input type="text" 
+                     placeholder="Enter your first name" 
+                     class="form-control" 
+                     id="firstName" 
+                     name="firstName" 
+                     ngModel />
+        </div>
+        <div class="input-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" 
+                   placeholder="Enter your last name" 
+                   class="form-control" 
+                   id="lastName" 
+                   name="lastName" 
+                   ngModel />
+        </div>
+        <div class="input-field">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter your email" class="form-control" id="email" name="email" ngModel />
+        </div>
+        <div class="input-field">
+            <label for="password">Password</label>
+            <input type="text" placeholder="Enter your password" class="form-control" id="pass" name="password" ngModel />
+        </div>
+        <button class="btn btn-signup" type="submit" [disabled]="!f.valid">Sign Up</button>
+      </form>
+    </div>
+    <div class="modal" *ngIf="this.authService.signedUp">
+        <h3>You are successfully registered! Wanna <a routerLink="/login">login?</a></h3>
+    </div>
+  </div>

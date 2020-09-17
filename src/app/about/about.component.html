@@ -1,0 +1,38 @@
+<div class="container">
+    <h2 class="bio-title"> Dr. Sai Sudarsan</h2>
+    <div class="bio-wrapper">
+        <div class="visit-btns">
+            <button class="btn btn-create" (click)="openVisitPage()">Book an appointment</button>
+            <button class="btn btn-visits" 
+                        *ngIf="this.authService.isAuth()"
+                        (click)="showMyVisits()">
+                        My visits
+            </button>
+        </div>    
+        <div class="bio-image">
+            <img src="../../assets/images/sudarsan.png" alt="Dr S Sudarsan" />
+        </div>
+        <div class="bio-text">         
+            <h4>BBS, MCh - Neuro Surgery, MS - General Surgery, DNB - General Surgery</h4>  
+            <p>Neurosurgeon, Spine Surgeon, 33 Years Experience</p>
+            <p>Dr. Sai Sudarsan is a Neurosurgeon, Spine Surgeon and Neurospine Surgeon in Secunderabad, 
+                Hyderabad and has an experience of 33 years in these fields. 
+                Dr. Sai Sudarsan practices at Srikara Hospitals in Secunderabad, Hyderabad and 
+                Star Hospitals in Banjara Hills, Hyderabad. The doctor completed MBBS from 
+                Sri Venkateswara Institute of Medical Sciences (SVIMS), Tirupati in 1986, MCh - 
+                Neuro Surgery from Sree Chitra Tirunal Institute for Medical Sciences & Technology, 
+                Trivandrum in 1997 and MS - General Surgery from Kurnool Medical College, Kurnool in 1992.</p>
+                <p> Some of the services provided by the doctor are: </p>
+                <ul>
+                    <li>Spine Surgery,</li>
+                    <li>Pediatric Neurosurgery,</li>
+                    <li>Deep Brain Stimulation,</li>
+                    <li>Chest Pain Treatment and Peripheral Neuro surgery etc. </li>
+                </ul> 
+        </div>
+    </div>
+    <div *ngIf="showVisits && this.authService.isAuth()">
+        <app-myvisits></app-myvisits>        
+        <div class="between" #myvisits></div>    
+    </div>
+</div>
